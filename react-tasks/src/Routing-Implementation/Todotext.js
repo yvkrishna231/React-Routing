@@ -43,13 +43,13 @@ class TodoText extends Component {
     render() {
         return (
             <div className='mt-5'>
-                <h1
+                <h3
                     style={{ textShadow: '3px 3px lightGrey' }}
                     className='text-center text-secondary'
-                >Project Of Todo Data</h1>
+                >Project Of Todo Data</h3>
                 <div className='container'>
                     <div className='row'>
-                        <div className='col-lg-12 col-sm-12 col-12 border shadow m-auto text-center p-3'>
+                        <div className='col-lg-6 col-sm-12 col-12 border shadow m-auto text-center p-3'>
                             <h3
                                 className='text-info text-center'
                                 style={{ textShadow: ' 2px 2px lightBlue' }}
@@ -68,13 +68,13 @@ class TodoText extends Component {
                                 className='btn btn-sm btn-danger mt-3 float-left'>RemoveAll</button>
                             <div className='mt-3'>
                                 {this.state.todoInput.length === 0 && <p className='text-danger'>No Todos Found</p>}
-                                {this.state.error && <p className='text-danger'>Enter some todo text</p>}
-                                {this.state.visible && <p className='text-danger'>Todo Input Already Exists</p>}
+                                {this.state.error && <p className='text-danger ml-5'>Enter some todo text</p>}
+                                {this.state.visible && <p className='text-danger ml-5'>Todo Input Already Exists</p>}
                             </div>
                         </div>
                     </div>
                     <div className='row mt-3'>
-                        <div className='col-md-6 col-sm-10 col-12 m-auto'>
+                        <div className='col-lg-6 col-md-8 col-sm-10 col-12 m-auto'>
                             <ul className='list-group'>
                                 {this.state.todoInput.map((val, ind) => {
                                     return (
@@ -92,11 +92,11 @@ class TodoText extends Component {
                                     )
                                 })}
                             </ul>
-                            <button
-                                onClick={this.handleOnClickNextPage}
-                                className='btn btn-sm btn-success float-right'>Next Page</button>
                         </div>
                     </div>
+                    <button
+                        onClick={this.handleOnClickNextPage}
+                        className='btn btn-sm btn-success float-right mt-3  '>Next Page</button>
                 </div>
             </div>
         )

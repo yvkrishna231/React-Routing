@@ -71,7 +71,7 @@ class DataBinding extends Component {
                             </table>
                             <button
                                 onClick={this.handleOnClick}
-                                className='btn btn-sm btn-success'>
+                                className='btn btn-sm btn-success float-left'>
                                 Previous Page
                             </button>
                             <button

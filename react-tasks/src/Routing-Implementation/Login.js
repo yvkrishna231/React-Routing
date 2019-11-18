@@ -26,9 +26,10 @@ class Login extends React.Component {
                 <div className='container' style={{ marginTop: '5em' }}>
                     <div className='row'>
                         <div
-                            className='col-lg-6 col-sm-12 col-12 bg-info m-auto border shadow text-center p-2' >
+                            className='col-lg-5 col-sm-12 col-12 m-auto border shadow text-center p-0'
+                        >
                             <div style={{ backgroundColor: 'ghostwhite' }}>
-                                <h3 className=' text-info text-center'>Please Enter Login Credentials</h3>
+                                <h3 className=' text-success text-center mt-4'>Please Enter Login Credentials</h3>
                                 <form
                                     onSubmit={this.handleOnSubmit}
                                     className='text-center mt-3'
@@ -49,10 +50,10 @@ class Login extends React.Component {
                                             className='mt-2 mr-4'
                                             type='password' />
                                     </div>
-                                    {this.state.error && <p className='text-danger'>Please Fill The Details</p>}
+                                    {this.state.error && <p className='text-danger ml-5'>Please Fill The Details</p>}
                                     <button
                                         onClick={this.handleOnClick3}
-                                        className='btn btn-sm btn-success mt-3 ml-5'
+                                        className='btn btn-sm btn-success mt-3 ml-5 mb-3'
                                     >Submit</button>
                                 </form>
                             </div>

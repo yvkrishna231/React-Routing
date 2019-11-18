@@ -32,61 +32,41 @@ class Register extends React.Component {
         return (
             <div>
                 <div className='container'>
-                    <h3
-                        className='text-success text-center'
-                        style={{ textShadow: '2px 2px #ff0000' }}
-                    >USER REGISTRATION FORM</h3>
-                    <div className='row border shadow text-center'
-                    >
-                        <div className='col-lg-5 col-sm-6 col-12 p-0'>
-                            <img src={ImageLeaf} alt='leaf image' width='100%' height='100%' />
-                        </div>
-                        <div className='col-lg-5 col-sm-6 col-12'
-                            style={{ marginTop: '5em' }}
-                        >
-                            <form
-                                onSubmit={this.handleOnSubmit}
-                                className=''>
-                                <h3 className='text-success'>Create A New Account</h3>
-                                <div className='mb-2'>
-                                    <em className='text-info'>UserName :</em>
+                    <h1 className='text-success text-center m-0'>Hello venkata krishna</h1>
+                    <div className='row'>
+                        <div className='col-lg-7 col-md-12 col-sm-12 col-10 border shadow p-0 m-auto'>
+                            <img src={ImageLeaf} />
+                            <form className='float-right mt-4'
+                                style={{ marginRight: '6em' }}
+                            >
+                                <div className='mb-4'>
+                                    <b>UserName :</b>
                                     <input
-                                        value={this.state.userName}
                                         onChange={this.handleOnChange1}
-                                        type='text'
-                                        className='text-primary' /><br></br>
-                                </div>
-                                <div className='mb-2'>
-                                    <em className='text-info'>Email :</em>
-                                    <input
-                                        value={this.state.email}
-                                        onChange={this.handleOnChange2}
-                                        type='email'
-                                        className='text-primary' /><br></br>
+                                        value={this.state.userName}
+                                        type='text' />
                                 </div>
                                 <div className='ml-3'>
-                                    <em className='text-info'>Password :</em>
+                                    <b>Email :</b>
                                     <input
-                                        value={this.state.password}
+                                        onChange={this.handleOnChange2}
+                                        value={this.state.email}
+                                        type='text' />
+                                </div><br></br>
+                                <div className='ml-2'>
+                                    <b>Password :</b>
+                                    <input
                                         onChange={this.handleOnChange3}
-                                        type='password'
-                                        className='text-primary' /><br></br>
-                                    <button className='btn btn-sm btn-info mt-3'
-                                        style={{ marginLeft: '4em' }}
-                                    >submit</button>
+                                        value={this.state.password}
+                                        type='text' />
                                 </div>
-                                {this.state.error && <p
-                                    className='text-danger ml-5 mt-3'>
-                                    Please fill the details correctly
-                                </p>}
+                                <button
+                                    onClick={this.handleOnSubmit}
+                                    className='btn btn-sm btn-outline-success'
+                                    style={{ marginLeft: '9em', marginTop: '10px' }}>submit</button><br></br>
+                                {this.state.error && <b className='text-danger' style={{ marginLeft: '5em' }}>Please fill the details</b>}
                             </form>
                         </div>
-                    </div>
-                    <div>
-                        <button
-                            className='btn btn-sm btn-success mt-3 float-left'
-                            onClick={this.handleOnClick4}
-                        >Previous Page</button>
                     </div>
                 </div>
             </div>

@@ -5,12 +5,11 @@ import Image from './Image.png'
 class NavBar extends React.Component {
     render() {
         return (
-            <div>
+            <div className='p-0'>
                 <nav
-                    className="navbar navbar-expand-sm bg-dark navbar-dark"
-                
-                    >
-                        {/* style={{width:'100%'}} */}
+                    className="col-lg-12 col-sm-12 col-12 navbar navbar-expand-sm navbar-expand-sm bg-dark navbar-dark"
+                >
+                    {/* style={{width:'100%'}} */}
                     <img
                         className='mr-2 bg-dark'
                         src={Image} alt='basic iamge'

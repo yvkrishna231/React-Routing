@@ -66,7 +66,8 @@ class Home extends React.Component {
                                 <img src={Image} height='30%' width='40%' alt='watch'></img>
                                 <p className='text-info'> First we need to install <q>react-router-dom</q> and then
                                 we need to import the
-                                 <q>BrowserRouter,Route,Switch</q>
+                                 <q>BrowserRouter,
+                                     Route,Switch</q>
                                     and after write a class
                                     component and then implement all route and assign a path to it and then take
                                     individual components and assigns path to them and at last maintain one comonent

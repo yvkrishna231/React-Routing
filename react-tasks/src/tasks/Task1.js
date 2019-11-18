@@ -3,48 +3,45 @@ import React, { Component } from 'react'
 class Task1 extends Component {
     state = {
         text: '',
-        text1: 'Is this line are helpfull to you',
+        text1: '',
+
     }
     handleOnClick = () => {
-        if (this.state.text1) {
-            this.setState({ text: 'thanks for your feedback!', text1: '' })
-        }
+        this.setState({ text: 'yes' })
     }
-    // handleOnSubmit = (e) => {
-    //     e.preventDefault();
-    // }
-    handleOnClick2 = () => {
-        if (this.state.text1) {
-            this.setState({
-                text: (
-                    <div>
-                        <textarea placeholder='Enter your comments'>
-                        </textarea><br></br>
-                        <button
-                            className='btn btn-sm btn-success'>
-                            Submit
-                        </button>
-                    </div>
-                ), text1: ''
-            })
-        }
+    handleOnClick1 = () => {
+        this.setState({ text1: 'no' })
     }
     render() {
         return (
-            <div className='container mt-3'>
+            <div className='container mt-5'>
+                <h1 className='text-center text-info'>Demo Task Of FeedBack</h1>
                 <div className='row'>
-                    <div className='col-lg-6 , m-auto'>
-                        <h1>{this.state.text1}{this.state.text}</h1>
-                        <button
-                            className='btn btn-sm btn-outline-secondary ml-2'
-                            onClick={this.handleOnClick}>
-                            yes
-                        </button>
-                        <button
-                            className='btn btn-sm btn-outline-secondary ml-2'
-                            onClick={this.handleOnClick2}>
-                            no
-                        </button>
+                    <div className='col-lg-5 border text-center shadow m-auto p-3'>
+                        {this.state.text ? (
+                            <div>
+                                <h4 className='text-warning'>Thanks for your feedback...!</h4>
+                            </div>
+                        ) : this.state.text1 ? (<div>
+                            <form onSubmit={this.handleOnClick}>
+                                <h3 className='p-0 text-info'>Sorry For That...!</h3>
+                                <h3 className='p-0 text-success'>Please Enter Your Comments</h3>
+                                <textarea
+                                    className='form-control text-info'
+                                    placeholder='Enter your comments'></textarea><br></br>
+                                <button
+                                    className='btn btn-sm btn-info'>submit</button>
+                            </form>
+                        </div>) : (<div>
+                            <b className='text-info'>Was This Helpful..?</b>&nbsp;
+                                    <button
+                                className='mr-2 btn btn-sm btn-success'
+                                onClick={this.handleOnClick}>yes</button>
+                            <button
+                                className='btn btn-sm btn-danger'
+                                onClick={this.handleOnClick1}>no</button>
+                        </div>)}
+
                     </div>
                 </div>
             </div>
